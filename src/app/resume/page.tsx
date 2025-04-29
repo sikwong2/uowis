@@ -1,7 +1,7 @@
 export default function Resume() {
   return (
-    <div>
-      <iframe src='/Resume.pdf' height='100%' width='100%' />
+    <div className="h-screen">
+      <iframe src='/Resume.pdf' className="w-full h-full border-none" />
     </div>
   )
 }
