@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="flex justify-center items-center z-0">
         <span className="font-mono font-bold text-4xl text-white">
-          I'm Simon and I'm a recent Computer Science graduate from UCSC
+          I&apos;m Simon and I&apos;m a recent Computer Science graduate from UCSC
         </span>
       </div>
     </div>
