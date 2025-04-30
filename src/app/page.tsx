@@ -1,4 +1,6 @@
 import TopBar from "./_components/topbar";
+import TypingText from "./_components/TypingText";
+
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col align-middle font-mono">
@@ -11,14 +13,12 @@ export default function Home() {
         <TopBar />
       </div>
 
-      <span className="relative z-10 text-white flex flex-row justify-center p-56 font-bold text-8xl ">
+      <span className="relative z-10 text-white flex flex-row justify-center p-42 font-bold text-8xl ">
         Hi
       </span>
 
-      <div className="flex justify-center items-center z-0">
-        <span className="font-mono font-bold text-4xl text-white">
-          I&apos;m Simon and I&apos;m a recent Computer Science graduate from UCSC
-        </span>
+      <div className="flex flex-col justify-center items-center z-0">
+        <TypingText text="I'm Simon and I'm a recent Computer Science Graduate from UCSC" speed={80} />
       </div>
     </div>
   );
