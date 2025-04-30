@@ -14,6 +14,12 @@ export default function Home() {
       <span className="relative z-10 text-white flex flex-row justify-center p-56 font-bold text-8xl ">
         Hi
       </span>
+
+      <div className="flex justify-center items-center z-0">
+        <span className="font-mono font-bold text-4xl text-white">
+          I'm Simon and I'm a recent Computer Science graduate from UCSC
+        </span>
+      </div>
     </div>
   );
 }
