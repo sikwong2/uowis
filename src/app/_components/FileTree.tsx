@@ -27,6 +27,7 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
 
   const toggleNode = (id: string) => {
     const newExpanded = new Set(expandedNodes);
+    // eslint-disable-next-line  @typescript-eslint/no-unused-expressions
     newExpanded.has(id) ? newExpanded.delete(id) : newExpanded.add(id);
     setExpandedNodes(newExpanded);
   };

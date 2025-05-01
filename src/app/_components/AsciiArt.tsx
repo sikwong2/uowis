@@ -18,7 +18,6 @@ const AsciiArt: React.FC<AsciiArtProps> = ({
   fontSize = '0.9rem',
   className = '',
   preserveWhitespace = true,
-  center = true // Centering enabled by default
 }) => {
   const artStyle = {
     fontFamily,
@@ -30,19 +29,10 @@ const AsciiArt: React.FC<AsciiArtProps> = ({
     display: 'inline-block' // Needed for proper centering
   };
 
-  const containerStyle = center ? {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    width: '100%',
-    height: '100%'
-  } : {};
 
   return (
     <div
-      className={`z-0 font-bold ascii-art-container ${className}`}
-      style={containerStyle}
+      className={`z-0 font-bold ascii-art-container ${className} flex justify-center items-center text-center w-full h-full`}
     >
       <div
         className="ascii-art-content"
