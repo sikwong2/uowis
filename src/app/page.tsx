@@ -13,7 +13,7 @@ const treeData = [
       {
         id: 'github',
         name: 'github',
-        route: '/github',
+        route: 'https://github.com/sikwong2',
         icon: '📄'
       },
       {
