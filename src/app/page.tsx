@@ -39,7 +39,13 @@ const treeData = [
             name: 'huffman_coding',
             route: '/portfolio/huffman',
             icon: '📄'
-          }
+          },
+          {
+            id: 'schmidtsamoa',
+            name: 'schmidt_samoa',
+            route: '/portfolio/schmidtsamoa',
+            icon: '📄'
+          },
         ]
       },
     ]
