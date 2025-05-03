@@ -14,14 +14,14 @@ const items: Item[] = [
   {
     id: "1",
     title: "Huffman Coding",
-    description: "Description for card 1",
+    description: "A lossless data compression algorithm",
     content: "This is the content of the first card.",
     route: '/portfolio/huffman'
   },
   {
     id: '2',
     title: 'Schmidt-Samoa cryptosystem',
-    description: 'An asymmetric encryption algorithmn',
+    description: 'An asymmetric encryption algorithm',
     content: '',
     route: '/portfolio/schmidtsamoa'
   }
@@ -31,10 +31,10 @@ export default function Portfolio() {
     <div className="relative min-h-screen flex flex-col align-middle font-mono">
       {/* Background layer with blur */}
       <div className="absolute inset-0 bg-[url('/images/lofi-room-wallpapers.jpg')] bg-cover bg-center blur-xs z-0"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+      <div className="z-10 grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         {items.map((item) => (
           <Link key={item.id} href={item.route}>
-            <Card key={item.id} className="h-full flex flex-col font-mono font-bold text-white text-2xl">
+            <Card key={item.id} className="h-full flex flex-col font-mono font-bold  text-2xl">
               <CardHeader>
                 <CardTitle>{item.title}</CardTitle>
                 <CardDescription>{item.description}</CardDescription>
