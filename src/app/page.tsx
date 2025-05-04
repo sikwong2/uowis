@@ -46,6 +46,12 @@ const treeData = [
             route: '/portfolio/schmidtsamoa',
             icon: '📄'
           },
+          {
+            id: 'amazon',
+            name: 'ucsc_amazon',
+            route: '/portfolio/amazon',
+            icon: '📄'
+          },
         ]
       },
     ]

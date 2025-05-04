@@ -1,0 +1,38 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa6";
+
+export default function Amazon() {
+  return (
+    <div className="relative min-h-screen flex flex-col align-middle font-mono">
+      {/* Background layer with blur */}
+      <div className="absolute inset-0 bg-[url('/images/lofi-room-wallpapers.jpg')] bg-cover bg-center blur-xs z-0"></div>
+
+      <div className='z-10 font-mono font-bold text-white justify-center items-center flex flex-col'>
+        <h1 className="p-4 text-6xl">UCSC-Amazon</h1>
+        <Card className="max-w-3xl">
+          <CardHeader className="flex justify-center items-center"> {/* Centering applied here */}
+            <CardTitle>
+              <Button className="button group">
+                <Link
+                  href="https://github.com/sikwong2/amazon"
+                  className="group-hover:text-green-300 flex flex-row justify-center items-center font-mono gap-x-3"
+                >
+                  <FaGithub />
+                  <p>Repo</p>
+                </Link>
+              </Button>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-start font-mono">
+            <img alt="Asymmetric encription" src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-2000.png" />
+            <p>This is a fullstack e-commerce app largely inspired by Amazon</p>
+          </CardContent>
+        </Card>
+      </div>
+
+    </div>
+  )
+}
+
