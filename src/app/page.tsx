@@ -52,6 +52,12 @@ const treeData = [
             route: '/portfolio/amazon',
             icon: '📄'
           },
+          {
+            id: 'httpserver',
+            name: 'http_server',
+            route: '/portfolio/httpserver',
+            icon: '📄'
+          },
         ]
       },
     ]
@@ -89,7 +95,7 @@ export default function Home() {
       </div>
 
       <div className="z-0 p-8"> {/* Dark background */}
-        <FileTree data={treeData} defaultExpanded={['home']} />
+        <FileTree data={treeData} defaultExpanded={['home', 'portfolio']} />
       </div>
 
     </div>

@@ -15,7 +15,7 @@ const items: Item[] = [
     id: "1",
     title: "Huffman Coding",
     description: "A lossless data compression algorithm",
-    content: "This is the content of the first card.",
+    content: '',
     route: '/portfolio/huffman'
   },
   {
@@ -24,8 +24,23 @@ const items: Item[] = [
     description: 'An asymmetric encryption algorithm',
     content: '',
     route: '/portfolio/schmidtsamoa'
-  }
+  },
+  {
+    id: '3',
+    title: 'UCSC-Amazon',
+    description: 'An e-commerce marketplace',
+    content: '',
+    route: '/portfolio/amazon'
+  },
+  {
+    id: '4',
+    title: 'HTTP Server',
+    description: 'A multithreaded HTTP server',
+    content: '',
+    route: '/portfolio/httpserver'
+  },
 ]
+
 export default function Portfolio() {
   return (
     <div className="relative min-h-screen flex flex-col align-middle font-mono">
