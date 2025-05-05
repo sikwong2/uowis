@@ -39,6 +39,13 @@ const items: Item[] = [
     content: '',
     route: '/portfolio/httpserver'
   },
+  {
+    id: '5',
+    title: 'Blackjack Bot',
+    description: 'A Discord bot to play blackjack',
+    content: '',
+    route: '/portfolio/blackjack'
+  },
 ]
 
 export default function Portfolio() {

@@ -58,6 +58,12 @@ const treeData = [
             route: '/portfolio/httpserver',
             icon: '📄'
           },
+          {
+            id: 'blackjack',
+            name: 'blackjack_bot',
+            route: '/portfolio/blackjack',
+            icon: '📄'
+          },
         ]
       },
     ]
