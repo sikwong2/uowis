@@ -46,6 +46,13 @@ const items: Item[] = [
     content: '',
     route: '/portfolio/blackjack'
   },
+  {
+    id: '6',
+    title: 'RSA Encryption',
+    description: 'An asymmetric encryption algorithm',
+    content: '',
+    route: '/portfolio/rsa'
+  },
 ]
 
 export default function Portfolio() {

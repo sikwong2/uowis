@@ -66,6 +66,12 @@ const treeData = [
             route: '/portfolio/blackjack',
             icon: '📄'
           },
+          {
+            id: 'rsa',
+            name: 'rsa_encryption',
+            route: '/portfolio/rsa',
+            icon: '📄'
+          }
         ]
       },
     ]
