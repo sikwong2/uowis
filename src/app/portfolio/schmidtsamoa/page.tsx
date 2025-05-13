@@ -28,8 +28,7 @@ export default function SchmidtSamoa() {
           </CardHeader>
           <CardContent className="flex flex-col items-start font-mono">
             <img alt="Asymmetric encription" src="https://www.cisco.com/content/dam/cisco-cdc/site/images/legacy/assets/swa/img/1100/assymmetric-encryption-1256x706.png" />
-            <p>This is an implementation of the Schmidt-Samoa cryptosystem done in Python.</p>
-            <p>The Schmidt-Samoa cryptosystem is an asymmetric encryption algorithm based on the difficulty of factoring large integers</p>
+            <p>This is an implementation of the Schmidt-Samoa cryptosystem done in Python. The Schmidt-Samoa cryptosystem is an asymmetric encryption algorithm based on the difficulty of factoring large integers<br /></p>
             <p>This project begins with first generating a public and private key. Creating the keys involves generating two sufficiently large primes, p and q. We compute the public key, N, as p<sup>2</sup>q. And the private key, d, as N<sup>-1</sup> mod lcm(p - 1, q - 1)</p>
             <p>To encrypt a file I read in the file and encode it into a number, m, and compute the ciphertext, c, with m<sup>N</sup> mod N</p>
             <p>To decrypt the ciphertext, c, we compute is as follows: c<sup>d</sup> mod pq</p>

@@ -12,6 +12,7 @@ interface TreeNode {
   icon?: string;
   route?: string;
   children?: TreeNode[];
+  target?: string;
 }
 
 interface FileTreeProps {
@@ -52,6 +53,7 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
                 href={node.route || '#'}
                 className={`flex items-center text-white hover:text-blue-400 transition-colors ${isActiveRoute(node.route) ? 'text-blue-400' : ''
                   }`}
+                target={node.target}
               >
                 {node.icon && <span className="mr-2">{node.icon}</span>}
                 <span>{node.name}</span>
