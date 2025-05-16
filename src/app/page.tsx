@@ -71,7 +71,13 @@ const treeData = [
             name: 'rsa_encryption',
             route: '/portfolio/rsa',
             icon: '📄'
-          }
+          },
+          {
+            id: 'physics',
+            name: 'ball_simulation',
+            route: '/portfolio/physics',
+            icon: '📄'
+          },
         ]
       },
     ]
