@@ -1,5 +1,4 @@
 'use client';
-
 import TypingText from "./_components/TypingText";
 import FileTree from './_components/FileTree';
 import AsciiArt from "./_components/AsciiArt";
@@ -119,5 +118,6 @@ export default function Home() {
       </div>
 
     </div>
+
   );
 }
