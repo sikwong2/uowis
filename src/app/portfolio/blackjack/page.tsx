@@ -1,5 +1,3 @@
-
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
@@ -20,6 +18,7 @@ export default function Blackjack() {
                 <Link
                   href="https://github.com/sikwong2/discord-save"
                   className="group-hover:text-green-300 flex flex-row justify-center items-center font-mono gap-x-3"
+                  target="_blank"
                 >
                   <FaGithub />
                   <p>Repo</p>

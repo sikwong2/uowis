@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { FaDiscord, FaEnvelope } from 'react-icons/fa6'
+import { FaEnvelope, FaLinkedin } from 'react-icons/fa6'
 
 export default function contact() {
   return (
@@ -11,20 +11,20 @@ export default function contact() {
 
       <div className="relative z-10 flex justify-center items-center text-center text-white text-6xl font-bold py-24 px-8">
         <p className="max-w-2xl">
-          You can contact me through email or Discord
+          You can contact me through email or Linkedin
         </p>
       </div>
 
 
       <div className="z-10 flex flex-row justify-center items-center space-x-36">
         <Button className='button group'>
-          <Link className="button_text group-hover:text-green-300" href="https://discord.com/users/155725788363227136">
-            <FaDiscord />
-            <span>Discord</span>
+          <Link className="button_text group-hover:text-green-300" href="https://www.linkedin.com/in/sikwong2/" target='_blank'>
+            <FaLinkedin />
+            <span>Linkedin</span>
           </Link>
         </Button>
         <Button className='button group'>
-          <Link className="button_text group-hover:text-green-300" href="mailto:skwong5@ucsc.edu">
+          <Link className="button_text group-hover:text-green-300" href="mailto:skwong5@ucsc.edu" target='_blank'>
             <FaEnvelope />
             <span>Email</span>
           </Link>

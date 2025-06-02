@@ -18,6 +18,7 @@ export default function Huffman() {
                 <Link
                   href="https://github.com/sikwong2/huffman-coding"
                   className="group-hover:text-green-300 flex flex-row justify-center items-center font-mono gap-x-3"
+                  target="_blank"
                 >
                   <FaGithub />
                   <p>Repo</p>

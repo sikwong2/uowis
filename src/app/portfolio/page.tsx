@@ -53,6 +53,13 @@ const items: Item[] = [
     content: '',
     route: '/portfolio/rsa'
   },
+  {
+    id: '7',
+    title: 'Ball Simulation',
+    description: 'A bouncing ball simulation',
+    content: '',
+    route: '/portfolio/physics'
+  },
 ]
 
 export default function Portfolio() {

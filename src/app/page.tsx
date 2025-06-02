@@ -1,5 +1,4 @@
 'use client';
-
 import TypingText from "./_components/TypingText";
 import FileTree from './_components/FileTree';
 import AsciiArt from "./_components/AsciiArt";
@@ -14,13 +13,15 @@ const treeData = [
         id: 'github',
         name: 'github',
         route: 'https://github.com/sikwong2',
-        icon: '📄'
+        icon: '📄',
+        target: '_blank'
       },
       {
         id: 'resume',
         name: 'resume',
         route: '/resume',
-        icon: '📄'
+        icon: '📄',
+        target: '_blank'
       },
       {
         id: 'contact',
@@ -69,7 +70,13 @@ const treeData = [
             name: 'rsa_encryption',
             route: '/portfolio/rsa',
             icon: '📄'
-          }
+          },
+          {
+            id: 'physics',
+            name: 'ball_simulation',
+            route: '/portfolio/physics',
+            icon: '📄'
+          },
         ]
       },
     ]
@@ -111,5 +118,6 @@ export default function Home() {
       </div>
 
     </div>
+
   );
 }
