@@ -4,7 +4,6 @@ import React from 'react';
 interface AsciiArtProps {
   art: string;
   fontFamily?: 'monospace' | 'courier' | string;
-  color?: string;
   fontSize?: string;
   className?: string;
   preserveWhitespace?: boolean;
@@ -14,14 +13,12 @@ interface AsciiArtProps {
 const AsciiArt: React.FC<AsciiArtProps> = ({
   art,
   fontFamily = 'monospace',
-  color = '#ffffff',
   fontSize = '0.9rem',
   className = '',
   preserveWhitespace = true,
 }) => {
   const artStyle = {
     fontFamily,
-    color,
     fontSize,
     whiteSpace: preserveWhitespace ? 'pre' : 'normal',
     lineHeight: '1.2',

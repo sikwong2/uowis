@@ -1,4 +1,5 @@
 
+import TopBar from "@/app/_components/topbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
@@ -7,10 +8,9 @@ import { FaGithub } from "react-icons/fa6";
 export default function SchmidtSamoa() {
   return (
     <div className="relative min-h-screen flex flex-col align-middle font-mono">
-      {/* Background layer with blur */}
-      <div className="absolute inset-0 bg-[url('/images/lofi-room-wallpapers.jpg')] bg-cover bg-center blur-xs z-0"></div>
+      <TopBar />
 
-      <div className='z-10 font-mono font-bold text-white justify-center items-center flex flex-col'>
+      <div className='z-10 font-mono font-bold  justify-center items-center flex flex-col'>
         <h1 className="p-4 text-6xl">Schmidt-Samoa</h1>
         <Card className="max-w-3xl">
           <CardHeader className="flex justify-center items-center"> {/* Centering applied here */}

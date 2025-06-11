@@ -39,7 +39,7 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
     return (
       <ul className="space-y-1 font-mono font-bold text-lg">
         {nodes.map((node) => (
-          <li key={node.id} className="text-white">
+          <li key={node.id} className="">
             <div className="flex items-center justify-start">
               {node.children && (
                 <button
@@ -51,7 +51,7 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
               )}
               <Link
                 href={node.route || '#'}
-                className={`flex items-center text-white hover:text-blue-400 transition-colors ${isActiveRoute(node.route) ? 'text-blue-400' : ''
+                className={`flex items-center  hover:text-blue-400 transition-colors ${isActiveRoute(node.route) ? 'text-blue-400' : ''
                   }`}
                 target={node.target}
               >
@@ -69,7 +69,7 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
   };
 
   return (
-    <div className="font-mono text-sm text-white flex justify-center">
+    <div className="font-mono text-sm  flex justify-center">
       <div className="w-auto max-w-full px-4 py-2">
         {renderTree(data)}
       </div>

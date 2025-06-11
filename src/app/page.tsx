@@ -2,6 +2,7 @@
 import TypingText from "./_components/TypingText";
 import FileTree from './_components/FileTree';
 import AsciiArt from "./_components/AsciiArt";
+import TopBar from "./_components/topbar";
 const treeData = [
   {
     id: 'home',
@@ -85,10 +86,7 @@ const treeData = [
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col align-middle font-mono">
-      {/* Background layer with blur */}
-      <div className="absolute inset-0 bg-[url('/images/lofi-room-wallpapers.jpg')] bg-cover bg-center blur-xs z-0">
-      </div>
-
+      <TopBar />
       <AsciiArt
         art={`
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

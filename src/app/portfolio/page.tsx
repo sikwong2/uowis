@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import Link from "next/link"
+import TopBar from "../_components/topbar"
 
 interface Item {
   id: string
@@ -65,8 +66,7 @@ const items: Item[] = [
 export default function Portfolio() {
   return (
     <div className="relative min-h-screen flex flex-col align-middle font-mono">
-      {/* Background layer with blur */}
-      <div className="absolute inset-0 bg-[url('/images/lofi-room-wallpapers.jpg')] bg-cover bg-center blur-xs z-0"></div>
+      <TopBar />
       <div className="z-10 grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         {items.map((item) => (
           <Link key={item.id} href={item.route}>
