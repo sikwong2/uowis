@@ -1,15 +1,14 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa6'
+import TopBar from '../_components/topbar'
 
 export default function contact() {
   return (
     <div className="relative min-h-screen flex flex-col align-middle font-mono">
-      {/* Background layer with blur */}
-      <div className="absolute inset-0 bg-[url('/images/lofi-room-wallpapers.jpg')] bg-cover bg-center blur-xs z-0">
-      </div>
+      <TopBar />
 
-      <div className="relative z-10 flex justify-center items-center text-center text-white text-6xl font-bold py-24 px-8">
+      <div className="relative z-10 flex justify-center items-center text-center  text-6xl font-bold py-24 px-8">
         <p className="max-w-2xl">
           You can contact me through email or Linkedin
         </p>
