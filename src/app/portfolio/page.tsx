@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import Link from "next/link"
-import TopBar from "../_components/topbar"
+import TopBar from '@/components/topbar'
 
 interface Item {
   id: string

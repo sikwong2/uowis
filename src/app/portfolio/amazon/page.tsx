@@ -1,4 +1,4 @@
-import TopBar from "@/app/_components/topbar";
+import TopBar from "@/components/topbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";

@@ -1,8 +1,8 @@
 'use client';
-import TypingText from "./_components/TypingText";
-import FileTree from './_components/FileTree';
-import AsciiArt from "./_components/AsciiArt";
-import TopBar from "./_components/topbar";
+import TypingText from "@/components/TypingText";
+import FileTree from '@/components/FileTree';
+import AsciiArt from "@/components/AsciiArt";
+import TopBar from "@/components/topbar";
 const treeData = [
   {
     id: 'home',

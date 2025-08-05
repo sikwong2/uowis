@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa6'
-import TopBar from '../_components/topbar'
+import TopBar from '@/components/topbar'
 
 export default function contact() {
   return (
