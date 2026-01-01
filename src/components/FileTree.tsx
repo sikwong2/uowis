@@ -1,10 +1,10 @@
 'use client';
 
-'use client';
-
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface TreeNode {
   id: string;
@@ -28,48 +28,83 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
 
   const toggleNode = (id: string) => {
     const newExpanded = new Set(expandedNodes);
-    // eslint-disable-next-line  @typescript-eslint/no-unused-expressions
     newExpanded.has(id) ? newExpanded.delete(id) : newExpanded.add(id);
     setExpandedNodes(newExpanded);
   };
 
   const isActiveRoute = (route?: string) => pathname === route;
 
-  const renderTree = (nodes: TreeNode[]) => {
+  const renderTree = (nodes: TreeNode[], depth: number = 0, isLast: boolean[] = []) => {
     return (
-      <ul className="space-y-1 font-mono font-bold text-lg">
-        {nodes.map((node) => (
-          <li key={node.id} className="">
-            <div className="flex items-center justify-start">
-              {node.children && (
-                <button
-                  onClick={() => toggleNode(node.id)}
-                  className="mr-2 text-gray-400 hover:text-white w-4 h-4 flex items-center justify-center"
+      <ul className="select-none">
+        {nodes.map((node, index) => {
+          const isLastNode = index === nodes.length - 1;
+          const hasChildren = node.children && node.children.length > 0;
+          const isExpanded = expandedNodes.has(node.id);
+
+          return (
+            <li key={node.id} className="leading-relaxed">
+              <div className="flex items-center group">
+                {/* Render tree lines for each depth level */}
+                {depth > 0 && (
+                  <span className="text-muted-foreground/50 select-none">
+                    {isLast.map((last, i) => (
+                      <span key={i}>{last ? '  ' : '│ '}</span>
+                    ))}
+                  </span>
+                )}
+                {/* Render connector */}
+                {depth > 0 && (
+                  <span className="text-muted-foreground/50 select-none">
+                    {isLastNode ? '└─' : '├─'}
+                  </span>
+                )}
+                {/* Render folder icon or bullet */}
+                {hasChildren ? (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => toggleNode(node.id)}
+                    className={cn(
+                      "h-5 w-5 p-0 text-muted-foreground hover:text-foreground",
+                      depth > 0 ? 'ml-0' : ''
+                    )}
+                  >
+                    {isExpanded ? '▾' : '▸'}
+                  </Button>
+                ) : (
+                  <span className={cn(
+                    "text-muted-foreground/50 w-5 h-5 flex items-center justify-center",
+                    depth > 0 ? 'ml-0' : ''
+                  )}>
+                    •
+                  </span>
+                )}
+                {/* Render node name */}
+                <Link
+                  href={node.route || '#'}
+                  className={cn(
+                    "ml-1 hover:text-primary transition-colors",
+                    isActiveRoute(node.route) ? 'text-primary font-medium' : 'text-foreground'
+                  )}
+                  target={node.target}
                 >
-                  {expandedNodes.has(node.id) ? '−' : '+'}
-                </button>
+                  {node.icon && <span className="mr-2">{node.icon}</span>}
+                  <span>{node.name}</span>
+                </Link>
+              </div>
+              {hasChildren && isExpanded && (
+                <div>{renderTree(node.children, depth + 1, [...isLast, isLastNode])}</div>
               )}
-              <Link
-                href={node.route || '#'}
-                className={`flex items-center  hover:text-blue-400 transition-colors ${isActiveRoute(node.route) ? 'text-blue-400' : ''
-                  }`}
-                target={node.target}
-              >
-                {node.icon && <span className="mr-2">{node.icon}</span>}
-                <span>{node.name}</span>
-              </Link>
-            </div>
-            {node.children && expandedNodes.has(node.id) && (
-              <div className="ml-6 mt-1">{renderTree(node.children)}</div>
-            )}
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     );
   };
 
   return (
-    <div className="font-mono text-sm  flex justify-center">
+    <div className="flex justify-center text-base font-[family-name:var(--font-jetbrains-mono)]">
       <div className="w-auto max-w-full px-4 py-2">
         {renderTree(data)}
       </div>
