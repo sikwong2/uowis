@@ -28,7 +28,11 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
 
   const toggleNode = (id: string) => {
     const newExpanded = new Set(expandedNodes);
-    newExpanded.has(id) ? newExpanded.delete(id) : newExpanded.add(id);
+    if (newExpanded.has(id)) {
+      newExpanded.delete(id);
+    } else {
+      newExpanded.add(id);
+    }
     setExpandedNodes(newExpanded);
   };
 

@@ -78,14 +78,13 @@ const treeData = [
             route: '/portfolio/physics',
             icon: '📄'
           },
+          {
+            id: 'daily',
+            name: 'daily',
+            route: '/portfolio/daily',
+            icon: '📄'
+          },
         ]
-      },
-      {
-        id: 'resume1',
-        name: 'resume',
-        route: '/resume',
-        icon: '📄',
-        target: '_blank'
       },
     ]
   },

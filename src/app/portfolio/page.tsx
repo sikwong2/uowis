@@ -61,6 +61,13 @@ const items: Item[] = [
     content: '',
     route: '/portfolio/physics'
   },
+  {
+    id: '8',
+    title: 'Daily',
+    description: 'A minimalist habit tracking app',
+    content: '',
+    route: '/portfolio/daily'
+  },
 ]
 
 export default function Portfolio() {
