@@ -45,17 +45,12 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
           return (
             <li key={node.id} className="leading-relaxed">
               <div className="flex items-center group">
-                {/* Render tree lines for each depth level */}
+                {/* Show vertical lines and connectors if nested */}
                 {depth > 0 && (
-                  <span className="text-muted-foreground/50 select-none">
+                  <span className="text-muted-foreground/50 select-none mr-2">
                     {isLast.map((last, i) => (
-                      <span key={i}>{last ? '  ' : '│ '}</span>
+                      <span key={i}>{last ? '  ' : '│  '}</span>
                     ))}
-                  </span>
-                )}
-                {/* Render connector */}
-                {depth > 0 && (
-                  <span className="text-muted-foreground/50 select-none">
                     {isLastNode ? '└─' : '├─'}
                   </span>
                 )}
@@ -65,18 +60,12 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
                     variant="ghost"
                     size="icon"
                     onClick={() => toggleNode(node.id)}
-                    className={cn(
-                      "h-5 w-5 p-0 text-muted-foreground hover:text-foreground",
-                      depth > 0 ? 'ml-0' : ''
-                    )}
+                    className="h-5 w-5 p-0 text-muted-foreground hover:text-foreground"
                   >
                     {isExpanded ? '▾' : '▸'}
                   </Button>
                 ) : (
-                  <span className={cn(
-                    "text-muted-foreground/50 w-5 h-5 flex items-center justify-center",
-                    depth > 0 ? 'ml-0' : ''
-                  )}>
+                  <span className="text-muted-foreground/50 w-5 h-5 flex items-center justify-center">
                     •
                   </span>
                 )}
@@ -94,7 +83,7 @@ const FileTree = ({ data, defaultExpanded = [] }: FileTreeProps) => {
                 </Link>
               </div>
               {hasChildren && isExpanded && (
-                <div>{renderTree(node.children, depth + 1, [...isLast, isLastNode])}</div>
+                <div>{renderTree(node.children!, depth + 1, [...isLast, isLastNode])}</div>
               )}
             </li>
           );

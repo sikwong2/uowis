@@ -80,6 +80,13 @@ const treeData = [
           },
         ]
       },
+      {
+        id: 'resume1',
+        name: 'resume',
+        route: '/resume',
+        icon: '📄',
+        target: '_blank'
+      },
     ]
   },
 ];
